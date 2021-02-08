@@ -8,13 +8,12 @@
 	</head>
 	<body>
 		<script>
-			//Reemplaza la palabra azul por la palabra verde del siguiente texto  Tengo un coche de color azul . Después intenta hacerlo reemplazando las  o  por las  u .
-			let texto = "Tengo un coche de color azul";
-			let textoModified = texto.replace("azul", "verde");
-			console.log(textoModified);
-			// Aplique Regex para encontar todas las o en el texto.
-			textoModified = textoModified.replace(/o/g, "u");
-			console.log(textoModified);
+			// Dado el seguido listado de objetos  'mesa', 'silla', 'ordenador', 'libreta' , por un bucle que muestre por pantalla cada objeto y su posición en el listado.
+
+			const listadoObjetos = ["mesa", "silla", "ordenador", "libreta"];
+			listadoObjetos.map((objeto, index) =>
+				console.log(`El objeto ${objeto} esta en la posicion ${index}`)
+			);
 		</script>
 	</body>
 </html>
