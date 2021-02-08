@@ -8,13 +8,13 @@
 	</head>
 	<body>
 		<script>
-			// Crea una variable nota_examen junto con un alert que nos diga si el examen ha sido aprobado o no con la nota. (Habrá que utilizar un condicional IF)
-			let nota_examen = 6;
-			if (nota_examen < 5) {
-				alert("Ohh has suspendido el examen con un " + nota_examen);
-			} else {
-				alert("Bien hecho! Has aprobado con " + nota_examen);
-			}
+			//Reemplaza la palabra azul por la palabra verde del siguiente texto  Tengo un coche de color azul . Después intenta hacerlo reemplazando las  o  por las  u .
+			let texto = "Tengo un coche de color azul";
+			let textoModified = texto.replace("azul", "verde");
+			console.log(textoModified);
+			// Aplique Regex para encontar todas las o en el texto.
+			textoModified = textoModified.replace(/o/g, "u");
+			console.log(textoModified);
 		</script>
 	</body>
 </html>
