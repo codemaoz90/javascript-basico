@@ -4,46 +4,44 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="estilos.css" />
 		<title>Javascript Basico</title>
+		<script src="calculadora.js"></script>
 	</head>
 	<body>
-		<script>
-			//Aprovecha la función  "calculadora"  del ejercicio anterior para crear una calculadora completa con opciones para sumar, restar, multiplicar y dividir. Tendrás que controlar el Zero como denominador de una división, ya que si el usuario divide cualquier número entre 0 dará error (por ejemplo 3/0), tienes que garantizar que no falle!
-			function calculadora(operador, valor1, valor2) {
-				switch (operador) {
-					case "suma":
-						console.log(
-							`La suma entre ${valor1} y ${valor2} es: ${valor1 + valor2}`
-						);
-						break;
-					case "resta":
-						console.log(
-							`La resta entre ${valor1} y ${valor2} es: ${Math.abs(
-								valor1 - valor2
-							)}`
-						);
-						break;
-					case "multiplicacion":
-						console.log(
-							`La multiplicacion entre ${valor1} y ${valor2} es: ${
-								valor1 * valor2
-							}`
-						);
-						break;
-					case "division":
-						if (valor2 == 0) {
-							console.log(
-								"En una division no podemos tener como denominador el numero '0'"
-							);
-						} else {
-							console.log(
-								`La division entre ${valor1} y ${valor2} es: ${valor1 / valor2}`
-							);
-						}
-						break;
-				}
-			}
-			console.log(calculadora("division", 3, 0));
-		</script>
+		<main class="container">
+			<h1 style="color: white; margin-right: 40px">Calculadora</h1>
+			<div class="calculadora">
+				<div id="screen" class="screen"></div>
+				<div id="keys" class="keys">
+					<div class="math-number">
+						<div id="math" class="math">
+							<button data-math="add">+</button>
+							<button data-math="minus">-</button>
+							<button data-math="mult">*</button>
+							<button data-math="div">/</button>
+							<button></button>
+						</div>
+
+						<div id="number" class="numbers">
+							<button data-number="0">0</button>
+							<button data-number="1">1</button>
+							<button data-number="2">2</button>
+							<button data-number="3">3</button>
+							<button data-number="4">4</button>
+							<button data-number="5">5</button>
+							<button data-number="6">6</button>
+							<button data-number="7">7</button>
+							<button data-number="8">8</button>
+							<button data-number="9">9</button>
+						</div>
+					</div>
+					<div class="operation" id="operation">
+						<button data-operation="=">=</button>
+						<button data-operation="clear">AC</button>
+					</div>
+				</div>
+			</div>
+		</main>
 	</body>
 </html>
