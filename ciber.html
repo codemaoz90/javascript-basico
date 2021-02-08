@@ -8,35 +8,42 @@
 	</head>
 	<body>
 		<script>
-			// Crea una función llamada calculadora que tenga como entrada los siguientes parámetros: operador, valor1 y valor2.
-			// Estructura de la función que haga sumas, restas y multiplicaciones. El resultado deberá ser mostrar por pantalla.
-
+			//Aprovecha la función  "calculadora"  del ejercicio anterior para crear una calculadora completa con opciones para sumar, restar, multiplicar y dividir. Tendrás que controlar el Zero como denominador de una división, ya que si el usuario divide cualquier número entre 0 dará error (por ejemplo 3/0), tienes que garantizar que no falle!
 			function calculadora(operador, valor1, valor2) {
 				switch (operador) {
 					case "suma":
 						console.log(
-							`La suma entre ${valor1} y ${valor2} es ${valor1 + valor2}`
+							`La suma entre ${valor1} y ${valor2} es: ${valor1 + valor2}`
 						);
 						break;
 					case "resta":
 						console.log(
-							`La resta entre ${valor1} y ${valor2} es ${Math.abs(
+							`La resta entre ${valor1} y ${valor2} es: ${Math.abs(
 								valor1 - valor2
 							)}`
 						);
 						break;
 					case "multiplicacion":
 						console.log(
-							`La multiplicacion entre ${valor1} y ${valor2} es ${
+							`La multiplicacion entre ${valor1} y ${valor2} es: ${
 								valor1 * valor2
 							}`
 						);
 						break;
+					case "division":
+						if (valor2 == 0) {
+							console.log(
+								"En una division no podemos tener como denominador el numero '0'"
+							);
+						} else {
+							console.log(
+								`La division entre ${valor1} y ${valor2} es: ${valor1 / valor2}`
+							);
+						}
+						break;
 				}
 			}
-			console.log(calculadora("suma", 10, 12));
-			console.log(calculadora("resta", 10, 12));
-			console.log(calculadora("multiplicacion", 10, 12));
+			console.log(calculadora("division", 3, 0));
 		</script>
 	</body>
 </html>
